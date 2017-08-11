@@ -1,0 +1,481 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../font/open-sans.woff2');
+    font-weight: normal;
+    font-style: normal
+}
+
+body {
+    font-family: 'Open Sans', Arial, Verdana, sans-serif;
+}
+
+
+/* arrow */
+
+.left-arrow,
+.right-arrow {
+    position: fixed;
+    top: 60px;
+    bottom: 120px;
+    z-index: 8020;
+    display: none;
+    width: 80px;
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none
+}
+
+.left-arrow>i,
+.right-arrow>i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    margin-top: -40px;
+    margin-left: -20px;
+    color: #fff;
+    font-size: 30px;
+    text-shadow: 0 0 5px #000;
+}
+
+.left-arrow.touch,
+.right-arrow.touch {
+    position: absolute;
+    top: 50%;
+    width: 80px;
+    height: 80px;
+    margin-top: -40px
+}
+
+.left-arrow.touch>i,
+.right-arrow.touch>i {
+    position: static;
+    margin: 0
+}
+
+.left-arrow {
+    left: 0;
+}
+
+.left-arrow.touch {
+    left: 60px
+}
+
+.left-arrow:hover>i {
+    margin-left: -30px;
+    -webkit-transition: margin-left 0.3s ease-out;
+    -moz-transition: margin-left 0.3s ease-out;
+    -o-transition: margin-left 0.3s ease-out;
+    transition: margin-left 0.3s ease-out
+}
+
+.right-arrow {
+    right: 0
+}
+
+.right-arrow.touch {
+    right: 60px
+}
+
+.right-arrow:hover>i {
+    margin-left: -10px;
+    -webkit-transition: margin-left 0.3s ease-out;
+    -moz-transition: margin-left 0.3s ease-out;
+    -o-transition: margin-left 0.3s ease-out;
+    transition: margin-left 0.3s ease-out
+}
+
+
+/* footer */
+
+#GlobalFooter.hasTopBorder {
+    height: 25px;
+    color: #fff;
+    background-color: rgba(10, 62, 105, 0.9);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+    max-width: 100%;
+    text-shadow: 0 0px 5px black;
+    font-family: 'Open Sans', Arial, Verdana, sans-serif;
+}
+
+#GlobalFooter.hasTopBorder:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-top: solid 1px rgba(255, 255, 255, 0.1);
+    border-bottom: solid 1px rgba(0, 0, 0, 0.15);
+    height: 0;
+}
+
+#GlobalFooter .floatLeft,
+#GlobalFooter .floatRight {
+    opacity: 0.7;
+}
+
+.floatLeft,
+.cFloatLeft>* {
+    float: left;
+}
+
+footer div>div {
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 24px;
+    font-size: 10.8px;
+}
+
+footer .portalLabels {
+    max-width: 60%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.marginR10,
+.cMarginR10>* {
+    margin-right: 10px;
+}
+
+.floatRight,
+.cFloatRight>* {
+    float: right;
+}
+
+footer span {
+    opacity: 0.7;
+}
+
+
+/* roles */
+
+.contentContainer {
+    margin: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    padding-bottom: 0;
+    min-height: 500px;
+    bottom: 25px;
+    width: 100%;
+}
+
+.workplaceNavContainer {
+    border-color: rgba(10, 62, 105, 0.9);
+    background-color: rgba(10, 62, 105, 0.9);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 72px;
+}
+
+#rolesPanel {
+    width: auto;
+    max-width: 100%;
+    min-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    background: transparent;
+}
+
+a.role {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    float: left;
+    height: 72px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 72px;
+    opacity: 0.6;
+    box-sizing: border-box;
+}
+
+a.role.small {
+    padding: 0 10px;
+    width: 85px;
+}
+
+a.role.large {
+    padding: 0 15px;
+    width: 187px;
+    text-align: left;
+}
+
+a.role:hover {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+}
+
+a.role.active {
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #df6c00;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+}
+
+a.role i {
+    opacity: 0.6;
+    font-size: 20px;
+    vertical-align: middle;
+    padding-right: 3px;
+}
+
+a.role span {
+    font-family: 'Open Sans', Arial, Verdana, sans-serif;
+    font-size: 10px;
+    vertical-align: middle;
+}
+
+
+/* header */
+
+#GlobalHeader,
+.searchWorkplace {
+    z-index: 1001;
+    position: relative;
+}
+
+.topBar {
+    background-color: rgba(10, 62, 105, 0.9);
+    transition: 0.3s ease;
+    min-height: 40px;
+    max-width: 100%;
+    min-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.topBar a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 40px;
+    padding: 0 10px;
+}
+
+.topBar a.disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.6;
+}
+
+.topBar a>* {
+    display: inline-block;
+}
+
+.topBar a i {
+    font-size: 18px;
+}
+
+.bannerLeft {
+    float: left;
+}
+
+.bannerLeft a span {
+    font-family: 'Open Sans', Arial, Verdana, sans-serif;
+    opacity: 0.6;
+}
+
+.bannerRight {
+    float: right;
+}
+
+.bannerRight a span {
+    font-family: 'Open Sans', Arial, Verdana, sans-serif;
+    text-transform: initial;
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+.bannerMiddle {
+    padding: 5px;
+}
+
+.bannerTitle {
+    left: 30%;
+    right: 30%;
+    position: absolute;
+    text-align: center;
+}
+
+.functionSearch {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    position: relative;
+    display: inline-block;
+    border-radius: 3px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+.functionSearch input {
+    font-family: 'Open Sans', Arial, Verdana, sans-serif;
+    color: #1a2d4c;
+    min-height: 15px;
+    width: 120px;
+    margin: 0;
+    height: 20px;
+    line-height: 20px;
+    padding: 4px;
+    background: none;
+    border: solid 1px rgba(255, 255, 255, 0.1);
+    position: relative;
+    border-radius: 3px;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+}
+
+.functionSearch input:focus {
+    background-color: #fff;
+    width: 240px;
+}
+
+.functionSearch input::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: #fff;
+}
+
+.functionSearch input:focus::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: #1a2d4c;
+}
+
+.functionSearch input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #fff;
+    opacity: 1;
+}
+
+.functionSearch input:focus:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #1a2d4c;
+    opacity: 1;
+}
+
+.functionSearch input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #fff;
+    opacity: 1;
+}
+
+.functionSearch input:focus::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #1a2d4c;
+    opacity: 1;
+}
+
+.functionSearch input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #fff;
+}
+
+.functionSearch input:focus:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #1a2d4c;
+}
+
+.functionSearch input::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #fff;
+}
+
+.functionSearch input:focus::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #1a2d4c;
+}
+
+
+/* tiles */
+
+.tileContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+	margin:50px 100px 0 100px;
+}
+
+.tile {
+    border-radius: 3px;
+    background-color: rgba(192, 216, 236, 0.82);
+    width: 130px;
+    margin: 10px;
+    height: 130px;
+	text-align: center;
+}
+
+.pageIcon {
+    font-size: 240px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+    color: transparent;
+}
+
+.pageIconPara {
+    bottom: 400px;
+    right: 200px;
+}
+
+.pageTitle {
+    text-transform: uppercase;
+    font-family: 'Open Sans', Arial, Verdana, sans-serif;
+    font-size: 240px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+    color: transparent;
+}
+
+.pageTitlePara {
+    bottom: 400px;
+    left: 0px;
+}
+
+.bgPara {
+    bottom: 0;
+    left: 0;
+	/* background-color:gray; */
+}
+
+.icon{
+	border-radius: 50%;
+	width:70px;
+	height:70px;
+	display:block;
+    margin:auto;
+	padding: 5px 0 0 0;
+}
+
+.icon:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+  /* margin-top:-5px; */
+}
+
+
+.tileName{
+	margin:auto;
+	padding: 5px 0 0 0;
+	font-size:12px;
+	margin:8px 0 0 0;
+	display:block;
+}
+

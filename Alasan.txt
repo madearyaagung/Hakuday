@@ -1,0 +1,5 @@
+1. Meningkatkan UX
+	- Bisa scroll
+	- Background disesuaikan dengan role (sehingga tampilan lebih menarik)
+2. Alternate Background for Slow connection (Performance)
+
