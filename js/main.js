@@ -98,5 +98,11 @@ function displayImages(){
 		console.log("Lemot neh");
 	}else{
 		console.log("Cepat");
+		$("#mountainLayer1").attr("src", "img/mountain_layer_06.png");
+		$("#mountainLayer2").attr("src", "img/mountain_layer_05.png");
+		$("#mountainLayer3").attr("src", "img/mountain_layer_04.png");
+		$("#mountainLayer4").attr("src", "img/mountain_layer_03.png");
+		$("#mountainLayer5").attr("src", "img/mountain_layer_02.png");
+		$("#mountainLayer6").attr("src", "img/mountain_layer_01.png");
 	}
 }
